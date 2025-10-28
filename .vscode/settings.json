@@ -1,7 +1,0 @@
-{
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "files.autoSave": "afterDelay",
-  "editor.tabSize": 2,
-  "prettier.useTabs": false
-}
