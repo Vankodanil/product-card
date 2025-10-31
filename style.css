@@ -9,7 +9,7 @@
   font-weight: 400;
 }
 
-.main_title {
+.main-title {
   font-size: 70px;
   line-height: 78px;
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 .background {
-  background-image: url(/img/backgroud-flowers.png);
+  background-image: url('/img/backgroud-flowers.png');
   background-size: 790px 697px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -40,69 +40,68 @@
   margin: 0 auto;
 }
 
-.content_container {
+.content-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  width: 1100px;
+  width: 1110px;
   height: 1191px;
   margin: 110px 85px 116px 85px;
   gap: 45px;
 }
 
-.card_container {
+.card-container {
   width: 340px;
   height: 573px;
   padding: 25px;
   background-color: #F7F7FA;
-  box-shadow: 2px 2px 10px 0px #5150761A;  
+  box-shadow: 2px 2px 10px 0px #5150761A;
 }
 
-.product_category {
-  font-weight: 400;
+.product-category {
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color:#A5A3B9;
+  color: #A5A3B9;
   margin-top: 30px;
   margin-bottom: 5px;
   display: block;
 }
 
-.product_name {
+.product-name {
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
   margin-bottom: 5px;
 }
 
-.product_discription {
-  margin-bottom: 15px;
+.product-description {
+  margin-bottom:15px;
 }
 
-.product_compound {
+.product-compound {
   margin-top: 5px;
   list-style: circle;
   margin-bottom: 25px;
 }
 
-.product_compound_item {
+.product-compound-item {
   margin-left: 14px;
 }
 
-.product_price_label {
+.product-price-label {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
-.prodct_price {
+.product-price {
   font-size: 20px;
   line-height: 24px;
 }
 
-.product_price_container {
-  display: flex;
+.product-price-container {
+  display: flex; 
   justify-content: space-between;
 }
