@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'montserrat', 'arial';
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+  font-weight: 400;
+}
+
+.main_title{
+  font-size: 70px;
+  line-height: 78px;
+  display: flex;
+  justify-content: center;
+  width: 846px;
+  height: 78px;
+  margin: 220px 217px 110px 217px;
+  text-align: center;
+}
+
+.background{
+  background-image: url(/img/backgroud-flowers.png);
+  background-size: 790px 697px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -220px;
+  left: 85px;
+  width: 790px;
+  height: 697px;
+  z-index: -1;
+}
+
+.content{
+  width: 1280px;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.content_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  width: 1100px;
+  height: 1191px;
+  margin: 110px 85px 116px 85px;
+  gap: 45px;
+}
+
+.card_container{
+  width: 340px;
+  height: 573px;
+  padding: 25px;
+  background-color: #F7F7FA;
+  box-shadow: 2px 2px 10px 0px #5150761A;  
+}
+
+.product_category {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color:#A5A3B9;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.product_name{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 5px;
+}
+
+.product_discription{
+  margin-bottom: 15px;
+}
+
+.product_compound{
+  margin-top: 5px;
+  list-style: circle;
+  margin-bottom: 25px;
+}
+
+.product_compound_item{
+  margin-left: 14px;
+}
+
+.product_price_label{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.prodct_price{
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.product_price_container{
+  display: flex;
+  justify-content: space-between;
+}
