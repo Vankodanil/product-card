@@ -105,9 +105,11 @@
   display: flex; 
   justify-content: space-between;
 }
+
 .bg-lime {
   background-color:#00FF00;
 }
+
 .bg-crimson {
   background-color:#DC143C;
 }

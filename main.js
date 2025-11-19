@@ -1,10 +1,10 @@
 //Покраска всех карточек
 const productCards = document.querySelectorAll('.card-container');
-const colorChangeAllCard = document.querySelector('#color-change-all-card');
+const colorChangeAllCardButton = document.querySelector('#color-change-all-card');
 const crimsonColor = '#DC143C';
 
-colorChangeAllCard.addEventListener('click',() => {
-  productCards.forEach((card)=> card.style.background = crimsonColor)
+colorChangeAllCardButton.addEventListener('click',() => {
+  productCards.forEach((card) => card.style.background = crimsonColor)
 })
 
 //Покраска первой карточки
@@ -46,7 +46,7 @@ mainTitle.addEventListener('mouseover',() => {
 })
 
 //Смена цвета кнопки с первого на второй и обратно
-const colorToggleButton = document.querySelector('#bg-lime');
+const colorToggleButton = document.querySelector('#bg-lm');
 
 colorToggleButton.addEventListener('click',() => {
   colorToggleButton.classList.toggle('bg-crimson');
