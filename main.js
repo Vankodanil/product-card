@@ -3,7 +3,7 @@ const productCards = document.querySelectorAll('.card-container');
 const colorChangeAllCardButton = document.querySelector('#color-change-all-card');
 const crimsonColor = '#DC143C';
 
-colorChangeAllCardButton.addEventListener('click',() => {
+colorChangeAllCardButton.addEventListener('click', () => {
   productCards.forEach((card) => card.style.background = crimsonColor)
 })
 
@@ -12,7 +12,7 @@ const limeColorHash = '#00FF00';
 const firstProductCard = document.querySelector('.card-container');
 const colorChangeFirstCardButton = document.querySelector('#color-change-first-card');
 
-colorChangeFirstCardButton.addEventListener('click',() => {
+colorChangeFirstCardButton.addEventListener('click', () => {
   firstProductCard.style.background = limeColorHash
 })
 
@@ -31,7 +31,7 @@ function openGoogle () {
 
 //Вывод в консоль лог
 const outputNotificationButton = document.querySelector('#output-notification');
-outputNotificationButton.addEventListener('click',() => outputNotification('делаю дз №4'));
+outputNotificationButton.addEventListener('click', () => outputNotification('делаю дз №4'));
 
 function outputNotification(massage) {
   alert(massage)
@@ -41,13 +41,13 @@ function outputNotification(massage) {
 //Вывод контента заголовка в консоль лог
 const mainTitle = document.querySelector('.main-title');
 
-mainTitle.addEventListener('mouseover',() => {
+mainTitle.addEventListener('mouseover', () => {
   console.log(mainTitle.textContent)
 })
 
 //Смена цвета кнопки с первого на второй и обратно
-const colorToggleButton = document.querySelector('#bg-lm');
+const colorToggleButton = document.querySelector('#switch-color-btn');
 
-colorToggleButton.addEventListener('click',() => {
+colorToggleButton.addEventListener('click', () => {
   colorToggleButton.classList.toggle('bg-crimson');
 })
