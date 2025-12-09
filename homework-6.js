@@ -1,14 +1,14 @@
 // Объект на основе своих данных
 
-const personProfile = {
+const profile = {
   name: 'Данил',
   surname: 'Ильясов',
-  mail: 'danilvanko@icloud.com',
+  email: 'danilvanko@icloud.com',
   job: 'Врач, будущий фрондент-девелопер',
   age: '28',
   country: 'Russia',
   city: 'Ufa',
-  relationship_status: 'married',
+  relationshipStatus: 'married',
 }
 
 //Объект который хранит данные об автомобиле
@@ -22,7 +22,7 @@ const car = {
 }
 
 // Добавление свойства вледелец авто в объект car одним значением
-car.owner = { ...personProfile}
+car.owner = profile;
 console.log(car);
 
 //Функция которая аргументом будет принимать объект, 
@@ -57,14 +57,13 @@ const products = ['meat', 'bread', 'milk', 'vegetables', 'cheese']
 
 // Создаем массив книг плюс второй массив книг из вселенной Гарри Поттера
 
-const booksRus = [
+const rusBooks = [
     {
         title: "Мастер и Маргарита",
         author: "Михаил Булгаков",
         year: 1967,
         coverColor: "черный",
         genre: "роман",
-        
     },
     {
         title: "Преступление и наказание",
@@ -72,7 +71,6 @@ const booksRus = [
         year: 1866,
         coverColor: "коричневый",
         genre: "психологический роман",
-        
     },
     {
         title: "Война и мир",
@@ -80,7 +78,6 @@ const booksRus = [
         year: 1869,
         coverColor: "зеленый",
         genre: "исторический роман",
-        
     }
 ];
 
@@ -120,17 +117,16 @@ const harryPotterBooks = [
 ];
 
 // Объединяем массивы с помощью spread оператора (...)
-const allBooks = [...booksRus, ...harryPotterBooks];
+const allBooks = [...rusBooks, ...harryPotterBooks];
 
 console.log("Объединенный массив всех книг:");
 console.log(allBooks);
 console.log(`Общее количество: ${allBooks.length} книг\n`);
 
 // Функция с использованием map() для добавления свойства isRare
-const isRareBooks = allBooks.map(({...obj}) => ({
-    ...obj, 
-    isRare: obj.year >= 2000
+const isRareBooks = allBooks.map(book => ({
+    ...book, 
+    isRare: book.year >= 2000
 }));
-
 
 console.log(isRareBooks)
