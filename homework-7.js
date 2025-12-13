@@ -1,38 +1,34 @@
+import { commentsSocialNetwork } from './comments.js';
+
 //2. Создать массив чисел от 1 до 10. Отфильтровать его таким образом, что бы мы получил массив чисел, начиная с 5.
 
 const numbers = [1,2,3,4,5,6,7,8,9,10]
 const filterNumbers = numbers.filter(num => num >= 5);
-
 console.log(filterNumbers)
 
 //3. Создать массив строк, относящихся к любой сущности 
 // (название фильмов/книг, кухонные приборы, мебель и т.д.), 
 // проверить, есть ли в массиве какая-то определенная сущность.
 
-
 const furniturs = [ "кресло", "диван", "стул", "стол", "кровать", "шкаф"]
 const item = "кровать";
-
 console.log(furniturs.includes(item) )
-
 
 //4. Написать функцию, которая аргументом будет принимать массив
 //  и изменять его порядок на противоположный ("переворачивать") 
 // . Два вышеуказанных массива с помощью этой функции перевернуть.
 
-function reverseArray(arr) {
+function getReversedArray(arr) {
   return arr.reverse();
 }
 
-reverseArray(numbers);
-reverseArray(furniturs);
+getReversedArray(numbers);
+getReversedArray(furniturs);
 
 console.log(numbers);
 console.log(furniturs);
 
 //7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
-
-import { commentsSocialNetwork } from './comments.js';
 
 console.log( commentsSocialNetwork.filter(c => c.email.includes(".com")));
 
@@ -70,7 +66,6 @@ const emailReduce = commentsSocialNetwork.reduce((acc, comment) => {
   return acc;
 }, []);
 console.log(emailReduce)
-
 const emailMap = commentsSocialNetwork.map(comment => comment.email);
 console.log( emailMap);
 
