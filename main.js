@@ -1,20 +1,23 @@
 //Покраска всех карточек
-const productCards = document.querySelectorAll('.card-container');
-const colorChangeAllCardButton = document.querySelector('#color-change-all-card');
+const colorChangeAllCardButton = document.querySelector('#btn-color-all');
 const crimsonColor = '#DC143C';
-
 colorChangeAllCardButton.addEventListener('click', () => {
-  productCards.forEach((card) => card.style.background = crimsonColor)
-})
+  const productCards = document.querySelectorAll('.card-list');
+  productCards.forEach((card) => {
+    card.style.background = crimsonColor;
+  });
+});
 
 //Покраска первой карточки
+const colorChangeFirstCardButton = document.querySelector('#btn-color-first');
 const limeColorHash = '#00FF00';
-const firstProductCard = document.querySelector('.card-container');
-const colorChangeFirstCardButton = document.querySelector('#color-change-first-card');
 
 colorChangeFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.background = limeColorHash
-})
+  const firstProductCard = document.querySelector('.card-list');
+  if (firstProductCard) {
+    firstProductCard.style.background = limeColorHash;
+  }
+});
 
 //Открытие Google страницы
 const openGoogleButton = document.querySelector('#open-google');
@@ -33,9 +36,9 @@ function openGoogle () {
 const outputNotificationButton = document.querySelector('#output-notification');
 outputNotificationButton.addEventListener('click', () => outputNotification('делаю дз №4'));
 
-function outputNotification(massage) {
-  alert(massage)
-  console.log(massage)
+function outputNotification(mеssage) {
+  alert(mеssage)
+  console.log(mеssage)
 }
 
 //Вывод контента заголовка в консоль лог
