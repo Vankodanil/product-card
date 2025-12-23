@@ -5,7 +5,7 @@
   const productTemplate = document.getElementById('product-template')
   const productItem = document.getElementById('product-item')
 
-  function productCard(productToRender) {
+  function getProductCards(productToRender) {
     productToRender.forEach(product => { 
       const productClone = productTemplate.content.cloneNode(true);
       productClone.querySelector('.product-image').src = `/img/${product.image}.png`
@@ -41,7 +41,7 @@ const getCardsCount = () => {
   const userInput = prompt("Сколько карточек отобразить? От 1 до 5")
   const selectedCount = Number(userInput);
   if (selectedCount > 0 && selectedCount <= products.length){
-    productCard(products.slice(0,selectedCount))
+    getProductCards(products.slice(0,selectedCount))
   } else {
     alert ("Введите число от 1 до 5")
   }
