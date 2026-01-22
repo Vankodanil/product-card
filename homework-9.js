@@ -47,9 +47,9 @@ registerForm.addEventListener("submit", (e) => {
   const formData = new FormData(registerForm);
 
   const password = formData.get("password");
-  const password2 = formData.get("password2");
+  const confirmPassword = formData.get("confirmPassword");
 
-  if (password !== password2) {
+  if (password !== confirmPassword) {
     alert("Пароли не совпадают!");
     return;
   }
