@@ -1,3 +1,4 @@
+
 export class Modal {
   constructor(id, overlayId) {
     this.modal = document.getElementById(id);
@@ -6,14 +7,14 @@ export class Modal {
     this.initListener();
   }
 
-  open() { 
-  this.modal.classList.add("modal-showed");
-  this.overlay.classList.add("overlay-showed");
+  open() {
+    this.modal.classList.add("modal-showed");
+    this.overlay.classList.add("overlay-showed");
   }
 
   close() {
-this.modal.classList.remove("modal-showed");
-this.overlay.classList.remove("overlay-showed");
+    this.modal.classList.remove("modal-showed");
+    this.overlay.classList.remove("overlay-showed");
   }
 
   isOpen() {
@@ -25,7 +26,3 @@ this.overlay.classList.remove("overlay-showed");
     this.overlay.addEventListener("click", () => this.close());
   }
 }
-export const modalRegister = new Modal("modal", "overlay");
-document.getElementById("openModalBtn").addEventListener("click", () => { modalRegister.open();
-})
-

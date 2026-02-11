@@ -11,6 +11,3 @@ import "./comments.js";
 import "./js/book.js";
 import "./js/store.js";
 import "./js/product.js";
-
-import { modalRegister } from "./js/modal.js";
-import { registerForm } from "./js/form.js";

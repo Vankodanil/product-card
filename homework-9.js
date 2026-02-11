@@ -1,68 +1,59 @@
-// Форма подписки
-const subscribeForm = document.getElementById("subscribeForm");
+import { Form } from "./js/form.js";
+import { Modal } from "./js/modal.js";
 
+//Модальное окно
+const modalRegister = new Modal("modal", "overlay");
+
+document.getElementById("openModalBtn").addEventListener("click", () => {
+  modalRegister.open();
+});
+
+//Форма подписки
+const subscribeForm = document.getElementById("subscribeForm");
 subscribeForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
   if (!subscribeForm.checkValidity()) {
     alert("Введите корректный email!");
     return;
   }
-
   console.log({ email: subscribeForm.email.value });
 });
 
-// Модальное окно
-const modal = document.getElementById("modal");
-const overlay = document.getElementById("overlay");
-const openModalBtn = document.getElementById("openModalBtn");
-const closeModalBtn = document.getElementById("closeModalBtn");
-
-openModalBtn.onclick = () => {
-  modal.classList.add("modal-showed");
-  overlay.classList.add("overlay-showed");
-};
-
-function closeModal() {
-  modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
-}
-
-closeModalBtn.onclick = closeModal;
-overlay.onclick = closeModal;
-
-// Регистрация
+//Форма регистрации
 let user = null;
 
-const registerForm = document.getElementById("registerForm");
+const registerForm = new Form("registerForm");
 
-registerForm.addEventListener("submit", (e) => {
+registerForm.form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (!registerForm.checkValidity()) {
+  if (!registerForm.isValid()) {
     alert("Форма заполнена неверно!");
     return;
   }
 
-  const formData = new FormData(registerForm);
+  const values = registerForm.getValues();
 
-  const password = formData.get("password");
-  const confirmPassword = formData.get("confirmPassword");
-
-  if (password !== confirmPassword) {
+  if (values.password !== values.confirmPassword) {
     alert("Пароли не совпадают!");
     return;
   }
 
+  // Сохраняем данные пользователя
   user = {
-    firstName: formData.get('firstName'),
-    lastName: formData.get('lastName'),
-    birthDate: formData.get('birthDate'),
-    login: formData.get('login'),
-    password,
+    firstName: values.firstName,
+    lastName: values.lastName,
+    birthDate: values.birthDate,
+    login: values.login,
+    password: values.password,
     createOn: new Date(),
   };
 
-  console.log("USER REGISTERED",user);
-  closeModal();
+  console.log("USER REGISTERED", user);
+
+  // Закрываем модалку
+  modalRegister.close();
+  registerForm.reset();
+
+  alert("Успешная регистрация!");
 });
