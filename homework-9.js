@@ -1,14 +1,12 @@
 import { Form } from "./js/form.js";
 import { Modal } from "./js/modal.js";
 
-//Модальное окно
 const modalRegister = new Modal("modal", "overlay");
 
 document.getElementById("openModalBtn").addEventListener("click", () => {
   modalRegister.open();
 });
 
-//Форма подписки
 const subscribeForm = document.getElementById("subscribeForm");
 subscribeForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -19,7 +17,6 @@ subscribeForm.addEventListener("submit", (e) => {
   console.log({ email: subscribeForm.email.value });
 });
 
-//Форма регистрации
 let user = null;
 
 const registerForm = new Form("registerForm");
@@ -39,19 +36,15 @@ registerForm.form.addEventListener("submit", (e) => {
     return;
   }
 
-  // Сохраняем данные пользователя
-  user = {
-    firstName: values.firstName,
-    lastName: values.lastName,
-    birthDate: values.birthDate,
-    login: values.login,
-    password: values.password,
-    createOn: new Date(),
-  };
+const { confirmPassword, ...userData } = registerForm.getValues();
+
+user = {
+  ...userData,
+  createOn: new Date()
+};
 
   console.log("USER REGISTERED", user);
 
-  // Закрываем модалку
   modalRegister.close();
   registerForm.reset();
 
