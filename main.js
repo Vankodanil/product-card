@@ -11,3 +11,4 @@ import "./comments.js";
 import "./js/book.js";
 import "./js/store.js";
 import "./js/product.js";
+import "./homework-11/homework-11.js";
